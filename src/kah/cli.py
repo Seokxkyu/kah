@@ -1,5 +1,6 @@
 import argparse
 from kah.db.utils import count, top
+from tabulate import tabulate
 
 def hello_msg():
     return "hello"
@@ -22,10 +23,16 @@ def cmd():
     # print(args.scount, args.top, args.dt)
 
     if args.scount:
-        print(count(args.scount))
+        cnt = count(args.scount)
+        print(f"The command '{args.scount}' was used {cnt} times")
+        # print(count(args.scount))
     elif args.top:
         if args.dt:
-            print(top(args.top, args.dt))
+            df = top(args.top, args.dt)
+            # print(top(args.top, args.dt))
+
+            header = df.columns.tolist()
+            print(tabulate(df.values.tolist(), headers=header, tablefmt="outline"))
         else:
             parser.error("utilize -t option with the -d option")
     else:

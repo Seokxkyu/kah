@@ -10,8 +10,8 @@ def top(count, dt):
     sdf = fdf.sort_values(by='cnt', ascending=False).head(count)
     ddf = sdf.drop(columns=['dt'])
     
-    r = ddf.to_string(index=False)
-    return r
+    # r = ddf.to_string(index=False)
+    return ddf
 
 def count(query):
     df = read_data()
