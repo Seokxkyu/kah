@@ -6,22 +6,25 @@ def hello_msg():
 
 def cmd():
     msg = hello_msg()
-    print(msg)
+    # print(msg)
 
     parser = argparse.ArgumentParser(
                     prog='ProgramName',
                     description='What the program does',
                     epilog='Text at the bottom of help')
 
-    parser.add_argument('filename')           # positional argument
-    parser.add_argument('-c', '--count')      # option that takes a value
-    parser.add_argument('-v', '--verbose', action='store_true')  # on/off flag
+    parser.add_argument('-s', '--scount')
+    parser.add_argument('-t', '--top')      
+    parser.add_argument('-d', '--dt')
 
     args = parser.parse_args()
-    print(args.filename, args.count, args.verbose)
+    print(args.scount, args.top, args.dt)
 
-    if True:
-        print("verbose ON")
-    else:
-        print("verbose OFF")
-
+    if args.scount:
+        print(f"-s => {args.scount}")
+    elif args.top:
+        print(f"-t => {args.top}")
+        if args.dt:
+            print(f"-d => {args.dt}")
+        else:
+            print("TODO")
