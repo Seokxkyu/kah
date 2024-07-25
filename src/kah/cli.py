@@ -1,5 +1,3 @@
-import pandas as pd
-
 def hello_msg():
     return "hello"
 
