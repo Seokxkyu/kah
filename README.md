@@ -24,8 +24,8 @@ mkdir 1932
 ```
 $ git clone <URL>
 $ cd <PROJECT_NAME>
-$ pyenv virtualenv 3.11.9 empty
-$ pyenv global env
+$ pyenv virtualenv 3.11.9 eee
+$ pyenv global eee
 $ source .venv/bin/activate
 $ pdm install
 $ pdm list
