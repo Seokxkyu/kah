@@ -29,6 +29,6 @@ def cmd():
             print(f"-d => {args.dt}")
             # TODO 특정 날짜의 명령어 TOP N
         else:
-            print("TODO - Error Warning")
+            parser.print_help()
     else:
         parser.print_help()
