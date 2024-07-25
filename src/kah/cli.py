@@ -1,4 +1,6 @@
 import argparse
+import pandas as pd
+import sys
 
 def hello_msg():
     return "hello"
@@ -27,9 +29,17 @@ def cmd():
         print(f"-t => {args.top}")
         if args.dt:
             print(f"-d => {args.dt}")
+            top_n(args.top, args.dt)
             # TODO 특정 날짜의 명령어 TOP N
         else:
-            parser.print_help()
+            # parser.print_help()
             parser.error("utilize -t option with the -d option")
     else:
         parser.print_help()
+
+
+def top_n(top_n, date):
+    df = read_parquet()
+    fdf = df[df['dt'] == date].sort_values(by='cnt', ascending=False).head(top_n)
+    fdf = fdf.drop(columns=['dt'])
+    print(fdf.to_string(index=False))

@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=http://127.0.0.1:8889/notebooks/top10.ipynb
+HostUrl=http://127.0.0.1:8889/files/top10.ipynb?_xsrf=2%7Cd1bed858%7Cf93da77ff2d6c3c18ce48efb17017f59%7C1721780248
