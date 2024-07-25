@@ -3,9 +3,12 @@
 
 [metadata]
 groups = ["default", "test"]
-strategy = ["cross_platform", "inherit_metadata"]
-lock_version = "4.4.2"
+strategy = ["inherit_metadata"]
+lock_version = "4.5.0"
 content_hash = "sha256:bf567235f6cafc0be7374242a3d668a3ba3988b20fcb36edaa966a7a9ad53381"
+
+[[metadata.targets]]
+requires_python = ">=3.11"
 
 [[package]]
 name = "colorama"
@@ -59,6 +62,7 @@ summary = "Code coverage measurement for Python"
 groups = ["test"]
 dependencies = [
     "coverage==7.6.0",
+    "tomli; python_full_version <= \"3.11.0a6\"",
 ]
 files = [
     {file = "coverage-7.6.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:c7b525ab52ce18c57ae232ba6f7010297a87ced82a2383b1afd238849c1ff933"},
@@ -126,9 +130,11 @@ summary = "pytest: simple powerful testing with Python"
 groups = ["test"]
 dependencies = [
     "colorama; sys_platform == \"win32\"",
+    "exceptiongroup>=1.0.0rc8; python_version < \"3.11\"",
     "iniconfig",
     "packaging",
     "pluggy<2,>=1.5",
+    "tomli>=1; python_version < \"3.11\"",
 ]
 files = [
     {file = "pytest-8.3.1-py3-none-any.whl", hash = "sha256:e9600ccf4f563976e2c99fa02c7624ab938296551f280835ee6516df8bc4ae8c"},
