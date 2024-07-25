@@ -30,5 +30,6 @@ def cmd():
             # TODO 특정 날짜의 명령어 TOP N
         else:
             parser.print_help()
+            parser.error("utilize -t option with the -d option")
     else:
         parser.print_help()
