@@ -8,7 +8,7 @@ def top(cnt, dt):
     df = read_data()
     fdf = df[df['dt'] == dt]
     sdf = fdf.sort_values(by='cnt', ascending=False).head(cnt)
-    ddf = sdf.drop(columns=['dt']
+    ddf = sdf.drop(columns=['dt'])
     
     r = ddf.to_string(index=False)
     return r
