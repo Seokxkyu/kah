@@ -15,6 +15,6 @@ def top(count, dt):
 
 def count(query):
     df = read_data()
-    fdf = df[df['cmd'].str.contains(query)]
+    fdf = df[df['cmd'] == query]
     cnt = fdf['cnt'].sum()
     return cnt
