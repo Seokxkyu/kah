@@ -31,6 +31,16 @@ $ pdm install
 $ pdm list
 $ pytest
  
+pytest
+======================== test session starts ========================
+platform linux -- Python 3.11.9, pytest-8.3.1, pluggy-1.5.0
+rootdir: /home/diginori/code/mah
+configfile: pyproject.toml
+plugins: cov-5.0.0
+collected 0 items
+
+======================= no tests ran in 0.01s =======================
+
 # option
 $ pdm init
 $ pdm venv create
