@@ -59,6 +59,31 @@ $ pip install git+https://github.com/Seokxkyu/kah.git
  
 ```
 
+### result 
+```bash
+$ my-history -t 10 -d 2024-07-15
+
++-------+-------+
+| cmd   |   cnt |
++=======+=======+
+| git   |  1906 |
+| sudo  |  1238 |
+| cd    |   819 |
+| vi    |   436 |
+| mkdir |   374 |
+| cat   |   294 |
+| pyenv |   283 |
+| rm    |   276 |
+| ls    |   243 |
+| cp    |   240 |
++-------+-------+
+```
+
+```bash
+$ my-history -s git
+
+The command 'git' was used 24464 times
+```
 
 ### Reference
 - https://pdm-project.org/en/latest/usage/dependency/#add-development-only-dependencies
